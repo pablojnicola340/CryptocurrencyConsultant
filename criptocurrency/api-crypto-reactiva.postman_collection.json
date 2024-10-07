@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "da63addb-8f67-4850-ae99-e497c2a6ce1e",
+		"name": "api-crypto-reactiva",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29364358"
+	},
+	"item": [
+		{
+			"name": "consultar precio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cotizaciones/ethereum/valor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cotizaciones",
+						"ethereum",
+						"valor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agregar crypto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"zushi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/monedas/nueva",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"monedas",
+						"nueva"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/monedas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"monedas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "historial",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cotizaciones/historial?nombres=bitcoin, zorro, zushi&maxPrice=99813444.00000000&minPrice=0&fechaInicio=2024-09-25T10:15:25.000&fechaFin=2024-10-05T23:30:30.000&size=8&sort=name,asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cotizaciones",
+						"historial"
+					],
+					"query": [
+						{
+							"key": "nombres",
+							"value": "bitcoin, zorro, zushi"
+						},
+						{
+							"key": "maxPrice",
+							"value": "99813444.00000000"
+						},
+						{
+							"key": "minPrice",
+							"value": "0"
+						},
+						{
+							"key": "fechaInicio",
+							"value": "2024-09-25T10:15:25.000"
+						},
+						{
+							"key": "fechaFin",
+							"value": "2024-10-05T23:30:30.000"
+						},
+						{
+							"key": "size",
+							"value": "8"
+						},
+						{
+							"key": "sort",
+							"value": "name,asc"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ultimas cotizaciones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/cotizaciones/ethereum/ultima-cotizacion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"cotizaciones",
+						"ethereum",
+						"ultima-cotizacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request consulta servicio por moneda",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.coingecko.com/api/v3/coins/dogecoin",
+					"protocol": "https",
+					"host": [
+						"api",
+						"coingecko",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"coins",
+						"dogecoin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request general servicio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.coingecko.com/api/v3/coins/list",
+					"protocol": "https",
+					"host": [
+						"api",
+						"coingecko",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"coins",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
